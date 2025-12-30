@@ -1,0 +1,1 @@
+this is the project related to all of the Django applications
