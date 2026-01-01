@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="products">
+
+  <article class="product-card">
+    <div class="product-info">
+
+      <h1>{{ menu_item.name }}</h1>
+
+      <p>
+        {{ menu_item.description }}
+      </p>
+
+      <p class="product-price">
+        {{ menu_item.price }}
+      </p>
+
+      <a href="{% url 'menu' %}" class="btn">
+        Back to Menu
+      </a>
+
+    </div>
+  </article>
+
+</section>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Grand Restaurant</title>
+
+    <meta
+      name="description"
+      content="Premium and delicious foods with touch of international traditions."
+    />
+
+    <meta
+      name="author"
+      content="Grand is a international lifestyle brand blending tradition with modern commerce."
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="{% static 'img/aboutus.webp' %}"
+    />
+
+    <!-- Main CSS (kept preload strategy) -->
+    <link
+      rel="preload"
+      as="style"
+      href="{% static 'css/style.css' %}"
+      onload="this.rel='stylesheet'"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla&family=Markazi+Text:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+
+    <!-- Header -->
+    {% include 'partials/_header.html' %}
+
+    <!-- Main Content -->
+    <main>
+      {% block content %}
+      {% endblock %}
+    </main>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section>
+    <article id="hero">
+      <h1 class="heading_shadow">SPECIAL OFFER</h1>
+      <p>
+        50% Off 
+      </p>
+      <a href="#" class="cta"> Book now </a>
+    </article>
+  </section>
+  <section>
+    <article>
+      <h2>Our New Menu</h2>
+      <img src="{% static 'img/menu.jpg' %}">
+      <p>
+        Our menu consists of various items based on different culture.
+      </p>
+      <p>
+        <a href="{% url 'menu' %}">See our new menu</a>
+      </p>
+    </article>
+    <article>
+      <h2>Book a table</h2>
+      <img src="{% static 'img/booktable.avif' %}">
+      <p>
+        Reserve your table for a great experience.
+      </p>
+      <p>
+        <a href="{% url 'book' %}">Book your table now</a>
+      </p>
+    </article>
+    <article>
+      <h2>Opening Hours</h2>
+      <img src="{% static 'img/openinghours.jpg' %}">
+      <p>
+        The Grand Restaurant is open 5 days a week. 
+      </p>
+      <ul>
+        <li>Tue - Sat: 8 - 15</li>
+        <li>Sun & Mon: Closed</li>
+
+      </ul>
+    </article>
+  </section>
+
+<footer style="background-color: #b3911fe6;">
+    <div style="width: 100%;">
+  
+      <h3 style="margin-bottom: 0.5rem;">
+        Grand
+      </h3>
+  
+      <p style="margin-top: 0;">
+        Grand Store · Authentic flavors, modern lifestyle
+      </p>
+  
+      <p>
+        © {{ year|default:"2025" }} Grand Store.
+        All rights reserved.
+      </p>
+  
+    </div>
+  </footer>
+  
+{% endblock %}

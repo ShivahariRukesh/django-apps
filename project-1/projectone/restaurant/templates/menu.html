@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="products">
+
+  {% for item in menu_items %}
+  <article class="product-card">
+    <div class="product-info">
+
+      <h2>{{ item.name }}</h2>
+
+      <p class="product-price">
+        {{ item.price }}
+      </p>
+
+      <a
+        href="{% url 'menu_item' pk=item.pk %}"
+        class="btn"
+      >
+        View Details
+      </a>
+
+    </div>
+  </article>
+  {% endfor %}
+
+</section>
+
+{% endblock %}

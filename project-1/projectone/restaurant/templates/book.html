@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="products">
+
+    <!-- Location / Map Card -->
+    <article class="product-card">
+      <div class="product-info">
+        <h2>Our Location</h2>
+        <p>Find us in the heart of Chicago.</p>
+  
+        <div class="videowrap">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.137438274865!2d85.42978731506128!3d27.671018282805803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1a2c4c3b0b7f%3A0x4c9f8b6c3d7f4f8!2sBhaktapur%2C%20Nepal!5e0!3m2!1sen!2snp!4v1730000000000"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    allowfullscreen>
+  </iframe>
+  
+        </div>
+      </div>
+    </article>
+  <!-- Reservation Form Card -->
+  <article class="product-card">
+    <div class="product-info">
+      <h1>Make a Reservation</h1>
+      <p>
+        Reserve your table and enjoy an authentic Grand dining
+        experience.
+      </p>
+
+      <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" id="button" value="Confirm Reservation">
+      </form>
+    </div>
+  </article>
+
+
+
+</section>
+{% endblock %}

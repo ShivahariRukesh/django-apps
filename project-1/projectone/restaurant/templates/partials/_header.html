@@ -1,0 +1,19 @@
+{% load static %}
+
+<header style="text-align:center; padding: 1.5rem 0;">
+  <h1 class="heading-shadow" style="margin: 0;">
+    Grand Restaurant
+  </h1>
+  <p style="margin: 0; font-size: 1.1rem; letter-spacing: 2px;">
+    Grand Store
+  </p>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="{% url 'home' %}">Home</a></li>
+    <li><a href="{% url 'about' %}">About</a></li>
+    <li><a href="{% url 'menu' %}">Menu</a></li>
+    <li><a href="{% url 'book' %}">Book</a></li>
+  </ul>
+</nav>
