@@ -2,67 +2,61 @@
 {% load static %}
 
 {% block content %}
-<section>
-    <article id="hero">
-      <h1 class="heading_shadow">SPECIAL OFFER</h1>
-      <p>
-        50% Off 
-      </p>
-      <a href="#" class="cta"> Book now </a>
-    </article>
-  </section>
-  <section>
-    <article>
+
+<!-- HERO SECTION -->
+<section id="hero">
+  <div>
+    <h1>SPECIAL OFFER</h1>
+    <p>50% Off</p>
+    <a href="/book" class="cta">Book now</a>
+  </div>
+</section>
+
+<!-- INFO CARDS SECTION -->
+<section class="products">
+
+  <article class="product-card">
+    <img src="{% static 'img/menu.jpg' %}" alt="Menu">
+    <div class="product-info">
       <h2>Our New Menu</h2>
-      <img src="{% static 'img/menu.jpg' %}">
       <p>
-        Our menu consists of various items based on different culture.
+        Our menu consists of various items based on different cultures.
       </p>
-      <p>
-        <a href="{% url 'menu' %}">See our new menu</a>
-      </p>
-    </article>
-    <article>
-      <h2>Book a table</h2>
-      <img src="{% static 'img/booktable.avif' %}">
+      <a href="{% url 'menu' %}" class="btn">View Menu</a>
+    </div>
+  </article>
+
+  <article class="product-card">
+    <img src="{% static 'img/booktable.avif' %}" alt="Book Table">
+    <div class="product-info">
+      <h2>Book a Table</h2>
       <p>
         Reserve your table for a great experience.
       </p>
-      <p>
-        <a href="{% url 'book' %}">Book your table now</a>
-      </p>
-    </article>
-    <article>
-      <h2>Opening Hours</h2>
-      <img src="{% static 'img/openinghours.jpg' %}">
-      <p>
-        The Grand Restaurant is open 5 days a week. 
-      </p>
-      <ul>
-        <li>Tue - Sat: 8 - 15</li>
-        <li>Sun & Mon: Closed</li>
-
-      </ul>
-    </article>
-  </section>
-
-<footer style="background-color: #b3911fe6;">
-    <div style="width: 100%;">
-  
-      <h3 style="margin-bottom: 0.5rem;">
-        Grand
-      </h3>
-  
-      <p style="margin-top: 0;">
-        Grand Store · Authentic flavors, modern lifestyle
-      </p>
-  
-      <p>
-        © {{ year|default:"2025" }} Grand Store.
-        All rights reserved.
-      </p>
-  
+      <a href="{% url 'book' %}" class="btn">Book Now</a>
     </div>
-  </footer>
-  
+  </article>
+
+  <article class="product-card">
+    <img src="{% static 'img/openinghours.jpg' %}" alt="Opening Hours">
+    <div class="product-info">
+      <h2>Opening Hours</h2>
+      <ul>
+        <li>Tue – Sat: 8:00 – 15:00</li>
+        <li>Sun & Mon: Closed</li>
+      </ul>
+    </div>
+  </article>
+
+</section>
+
+<!--HOME FOOTER -->
+<footer class="footer" style="border: 15px solid #b3911fe6; background-color: #a58576; text-align: center; padding: 2.5rem 5%;">
+  <div class="footer-content" style="max-width: 1100px; margin:auto">
+    <h3 style="font-size: 2rem; margin-bottom: 0.5rem;">Grand</h3>
+    <p style="margin:0.3rem 0; font-size: 0.95rem; opacity: 0.9;">Grand Store · Authentic flavors, modern lifestyle</p>
+    <p>© {{ year|default:"2025" }} Grand Store. All rights reserved.</p>
+  </div>
+</footer>
+
 {% endblock %}
