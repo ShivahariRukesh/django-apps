@@ -139,7 +139,6 @@
     flex-direction: column;
     justify-content: end;
     padding: 1.2rem;
-    border: 2px solid blue;
     height: 50%;
   }
   
@@ -186,8 +185,6 @@
 
 
 
-  <style>
-/* ---------- Global ---------- */
 section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -215,7 +212,6 @@ article > div {
     padding: 2rem;
 }
 
-/* ---------- Headings ---------- */
 h1, h2 {
     margin-bottom: 0.5rem;
     color: #222;
@@ -240,7 +236,7 @@ iframe:hover {
     transform: scale(1.02);
 }
 
-/* ---------- Form ---------- */
+
 form p {
     margin-bottom: 1rem;
 }
@@ -258,6 +254,123 @@ input:focus, select:focus, textarea:focus {
     box-shadow: 0 0 0 3px rgba(230,57,70,0.2);
     outline: none;
 }
+
+
+
+
+/* Menu Page -- Start */
+.menu {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+
+  animation: menuFadeIn 0.8s ease-in-out;
+}
+
+
+.menu-card {
+  background: linear-gradient(145deg, #ffffff, #f2f2f2);
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.15);
+}
+
+
+.menu-card__content {
+  padding: 2rem;
+  text-align: center;
+}
+
+
+.menu-card__title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 0.75rem;
+  position: relative;
+}
+
+
+.menu-card__title::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  display: block;
+  margin: 0.6rem auto 0;
+  background: #ff7a18;
+  transition: width 0.4s ease;
+}
+
+.menu-card:hover .menu-card__title::after {
+  width: 55%;
+}
+
+
+.menu-card__price {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 1.6rem;
+}
+
+
+.menu-card__btn {
+  display: inline-block;
+  padding: 0.75rem 1.8rem;
+  border-radius: 999px;
+
+  background: linear-gradient(135deg, #ff7a18, #ffb347);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.4s ease;
+}
+
+.menu-card__btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(255, 122, 24, 0.45);
+  background: linear-gradient(135deg, #ff8c2b, #ffc06a);
+}
+
+
+@keyframes menuFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 480px) {
+  .menu-card__content {
+    padding: 1.5rem;
+  }
+
+  .menu-card__title {
+    font-size: 1.35rem;
+  }
+}
+
+/* Menu Page --END */
 
 
 @keyframes fadeIn {
