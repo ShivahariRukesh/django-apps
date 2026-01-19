@@ -2,23 +2,23 @@
 {% load static %}
 
 {% block content %}
-<section>
+<section class="menu-item">
 
-  <article>
-    <div>
+  <article class="menu-item-card">
+    <div class="menu-item-card__content">
 
-      <h1>{{ menu_item.name }}</h1>
+      <h1 class="menu-item-card__title">{{ menu_item.name }}</h1>
 
-      <p>
+      <p class="menu-item-card__description">
         {{ menu_item.description }}
       </p>
 
-      <p>
+      <p class="menu-item-card__price">
         {{ menu_item.price }}
       </p>
 
-      <a href="{% url 'menu' %}" class="btn">
-        Back to Menu
+      <a href="{% url 'menu' %}" class="menu-item-card__btn">
+        ← Back to Menu
       </a>
 
     </div>
