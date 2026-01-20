@@ -2,23 +2,23 @@
 {% load static %}
 
 {% block content %}
-<section class="brand">
-  <div>
+<section class="brand-section">
+  <div class="brand-text">
     <h1>Our Brand</h1>
     <p>
-      Grand  is a premium Grand lifestyle brand inspired by multi international heritage.
+      Grand is a premium lifestyle brand inspired by multi-international heritage.
     </p>
     <p>
       Every product is crafted with authentic recipes, premium ingredients,
       and modern presentation.
     </p>
-    <p>
-    Located in Bhaktapur,Nepal
+    <p class="location">
+      📍 Bhaktapur, Nepal
     </p>
   </div>
 
-  <div>
-    <img src="{% static 'restaurant/img/aboutus.webp' %}" alt="aboutus" width="800px" height="600px" />
+  <div class="brand-image">
+    <img src="{% static 'restaurant/img/aboutus.webp' %}" alt="about us" />
   </div>
 </section>
 {% endblock %}
