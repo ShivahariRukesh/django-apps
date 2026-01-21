@@ -4,7 +4,9 @@
 {% block content %}
 <section class="menu-item">
 
-  <article class="menu-item-card">
+  <article class="menu-item-card" 
+  style="background-image: url('{% static 'restaurant/img/menu_items/' %}{{ menu_item.name|lower|slugify }}.jpg')">
+
     <div class="menu-item-card__content">
 
       <h1 class="menu-item-card__title">{{ menu_item.name }}</h1>
